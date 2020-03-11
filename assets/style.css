@@ -1,7 +1,16 @@
 body {
+  background: radial-gradient(circle at 100%, rgb(22, 48, 77), rgb(24, 33, 153) 50%, #eee 75%, rgb(55, 104, 240) 75%);
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+}
+
+.container {
+  padding-bottom: 2rem;
+}
+
+.lead {
+  font-weight: bold;
 }
 
 textarea{
@@ -43,12 +52,12 @@ textarea{
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #ff6961;
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #d3d3d3;
   color: white;
 }
 
@@ -65,7 +74,7 @@ textarea{
   color: white;
 }
 
-.saveBtn i:hover {
+.saveBtn a:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
