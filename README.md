@@ -1,2 +1,2 @@
-# dp
+# Daily Planner
 Daily Planner
