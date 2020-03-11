@@ -14,18 +14,19 @@ $(document).ready(function () {
         currentDate = $('#currentDay')
         update();
         setInterval(update, 1000);
+        
     })
 
 
     // variable setup for rows
 
-    var clockArr24 = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
-    var clockArr = ["0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700"];
+    var timeArr = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+    var timeArr24 = ["0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700"];
     var numArr = ["eight", "nine", "ten", "eleven", "twelve", "one", "two", "three", "four", "five"];
 
     
-  
-    for (var i = 0; i < clockArr.length; i++) {
+  //for loop to create new rows
+    for (var i = 0; i < timeArr24.length; i++) {
         var newRow = $("<row>");
 
         $(".container").append(newRow);
@@ -37,13 +38,13 @@ $(document).ready(function () {
         newCol2.attr("id", numArr[i]);
         newCol2.html("<textarea rows='3'style='width: 100%; margin-left:-2rem; height: 100%'></textarea>");
         newRow.addClass("time-block row");
-        newRow.attr("id", clockArr24[i]);
+        newRow.attr("id", timeArr[i]);
         var newButt = $("<button>");
-        newButt.attr("id", clockArr[i]);
+        newButt.attr("id", timeArr24[i]);
         newButt.attr("class", "saveBtn far fa-save col-1");
         newRow.append(newButt);
-        if (clockArr[i] >= 0800) {
-           newCol1.text(clockArr[i]);
+        if (timeArr24[i] >= 0800) {
+           newCol1.text(timeArr24[i]);
         
         } 
     };
@@ -78,7 +79,7 @@ $(document).ready(function () {
         localStorage.setItem(hour, note);
     })
 
-    for (let i=0; i < clockArr.length; i++) {
-    $("#"+numArr[i]).children("textarea").text(localStorage.getItem(clockArr[i]));
+    for (let i=0; i < timeArr24.length; i++) {
+    $("#"+numArr[i]).children("textarea").text(localStorage.getItem(timeArr24[i]));
     }
 })

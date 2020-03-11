@@ -11,6 +11,9 @@ body {
 
 .lead {
   font-weight: bold;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 textarea{
@@ -19,7 +22,8 @@ textarea{
   resize: none;
   color: #000000;
   border-left: 1px solid black;
-  padding: 10px;
+  padding: 2rem;
+  font-size: 20px;
 }
 
 .jumbotron {
@@ -48,16 +52,17 @@ textarea{
 .hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  border-top: 1px solid  rgb(22, 48, 77);
+  /*padding-top: 2rem;*/
 }
 
 .past {
-  background-color: #ff6961;
+  background-color: #dd261c;
   color: white;
 }
 
 .present {
-  background-color: #d3d3d3;
+  background-color: #06AED5;
   color: white;
 }
 
@@ -74,7 +79,7 @@ textarea{
   color: white;
 }
 
-.saveBtn a:hover {
+.saveBtn:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
