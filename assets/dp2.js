@@ -74,9 +74,10 @@ $(document).ready(function () {
         console.log($(this).siblings(".input").children("textarea").val());
 
         var hour = $(this).attr("id");
-        var note = $(this).siblings(".input").children("textarea").val();
+        var task = $(this).siblings(".input").children("textarea").val();
 
-        localStorage.setItem(hour, note);
+        localStorage.setItem(hour, task);
+        alert("Saved!")
     })
 
     for (let i=0; i < timeArr24.length; i++) {

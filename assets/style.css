@@ -1,19 +1,27 @@
 body {
-  background: radial-gradient(circle at 100%, rgb(22, 48, 77), rgb(24, 33, 153) 50%, #eee 75%, rgb(55, 104, 240) 75%);
+  background: radial-gradient(circle at 100%, rgb(113, 134, 54), rgb(47, 55, 175) 50%, #eee 75%, rgb(55, 104, 240) 75%);
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
 .container {
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
-.lead {
-  font-weight: bold;
+h1 {
+  font-family: 'Righteous', cursive;
   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
+}
+
+.lead {
+  font-family: 'Righteous', cursive;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-size: 22px;
 }
 
 textarea{
@@ -22,8 +30,9 @@ textarea{
   resize: none;
   color: #000000;
   border-left: 1px solid black;
-  padding: 2rem;
-  font-size: 20px;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  
 }
 
 .jumbotron {
@@ -31,7 +40,7 @@ textarea{
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid rgb(47, 55, 175);
 }
 
 .description{
@@ -41,6 +50,7 @@ textarea{
 .time-block{
   text-align: center;
   border-radius: 15px;
+  font-family: 'Righteous', cursive;
 }
 
 .row {
@@ -53,7 +63,7 @@ textarea{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px solid  rgb(22, 48, 77);
-  /*padding-top: 2rem;*/
+  padding-top: 2rem;
 }
 
 .past {
@@ -77,9 +87,10 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  font-size: 20px;
 }
 
 .saveBtn:hover {
-  font-size: 20px;
+  font-size: 50px;
   transition: all .3s ease-in-out;
 }
