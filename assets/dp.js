@@ -86,5 +86,5 @@ $(document).ready(function () {
     $("#"+numbers[i]).children("textarea").text(localStorage.getItem(timeArr24[i]));
     }
 
-    
+    console.log(timeArr24);
 }); 
