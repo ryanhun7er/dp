@@ -39,7 +39,7 @@ $(document).ready(function () {
         newCol2.html("<textarea rows='3'style='width: 100%; height: 100%'></textarea>");
         newRow.addClass("time-block row");
         newRow.attr("id", timeArr[i]);
-        
+
         var newButt = $("<button>");
         newButt.attr("id", timeArr24[i]);
         newButt.attr("class", "saveBtn far fa-save col-1");
@@ -68,4 +68,26 @@ $(document).ready(function () {
 
     })
     
-   
+  
+    //function for save button to write to local storage
+    var saveBtn = $(".saveBtn");
+    saveBtn.on("click", function (event) {
+        event.preventDefault();
+        // console.log($(this).attr("id"));
+        // console.log($(this).siblings(".input").children("textarea"));
+        // console.log($(this).siblings(".input").children("textarea").val());
+
+        var hour = $(this).attr("id");
+        var task = $(this).siblings(".input").children("textarea").val();
+
+        localStorage.setItem(hour, task);
+        alert("Saved!")
+    })
+
+    //for loop to get items from local storage
+    for (let i=0; i < timeArr24.length; i++) {
+    $("#"+numbers[i]).children("textarea").text(localStorage.getItem(timeArr24[i]));
+    }
+
+    console.log(numbers);
+}); 

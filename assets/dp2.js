@@ -20,9 +20,9 @@ $(document).ready(function () {
 
     // variable setup for rows
 
-    var timeArr = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+    var timeArr = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17"];
     var timeArr24 = ["0800", "0900", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700"];
-    var numArr = ["eight", "nine", "ten", "eleven", "twelve", "one", "two", "three", "four", "five"];
+    var numbers = ["eight", "nine", "ten", "eleven", "twelve", "one", "two", "three", "four", "five"];
 
     
   //for loop to create new rows
@@ -35,7 +35,7 @@ $(document).ready(function () {
         newRow.append(newCol1, newCol2);
         newCol1.attr("class", "col-2 hour");
         newCol2.attr("class", "col-9 input");
-        newCol2.attr("id", numArr[i]);
+        newCol2.attr("id", numbers[i]);
         newCol2.html("<textarea rows='3'style='width: 100%; margin-left:-2rem; height: 100%'></textarea>");
         newRow.addClass("time-block row");
         newRow.attr("id", timeArr[i]);
@@ -66,12 +66,13 @@ $(document).ready(function () {
 
     })
 
+    //function for save button to write to local storage
     var saveBtn = $(".saveBtn");
     saveBtn.on("click", function (event) {
         event.preventDefault();
-        console.log($(this).attr("id"));
-        console.log($(this).siblings(".input").children("textarea"));
-        console.log($(this).siblings(".input").children("textarea").val());
+        // console.log($(this).attr("id"));
+        // console.log($(this).siblings(".input").children("textarea"));
+        // console.log($(this).siblings(".input").children("textarea").val());
 
         var hour = $(this).attr("id");
         var task = $(this).siblings(".input").children("textarea").val();
@@ -80,7 +81,10 @@ $(document).ready(function () {
         alert("Saved!")
     })
 
+    //for loop to get items from local storage
     for (let i=0; i < timeArr24.length; i++) {
-    $("#"+numArr[i]).children("textarea").text(localStorage.getItem(timeArr24[i]));
+    $("#"+numbers[i]).children("textarea").text(localStorage.getItem(timeArr24[i]));
     }
+
+    console.log(numbers);
 })
