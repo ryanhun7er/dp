@@ -32,12 +32,14 @@ $(document).ready(function () {
         var newCol1 = $("<col>");
         var newCol2 = $("<col>");
         newRow.append(newCol1, newCol2);
+
         newCol1.attr("class", "col-2 hour");
         newCol2.attr("class", "col-9 input");
         newCol2.attr("id", numArr[i]);
-        newCol2.html("<textarea rows='3'style='width: 100%; margin-left:-2rem; height: 100%'></textarea>");
+        newCol2.html("<textarea rows='3'style='width: 100%; height: 100%'></textarea>");
         newRow.addClass("time-block row");
         newRow.attr("id", timeArr[i]);
+        
         var newButt = $("<button>");
         newButt.attr("id", timeArr24[i]);
         newButt.attr("class", "saveBtn far fa-save col-1");
@@ -48,5 +50,22 @@ $(document).ready(function () {
         } 
     };
 
+    // function to set times as past or future
+    $("row").each(function () {
+        var getId = parseInt($(this).attr("id"));
+        console.log("id= " + getId);
+
+        if (parseInt(currentHour) < 7 || parseInt(currentHour) > 18) {
+            $(this).addClass("past");
+        } if (getId < parseInt(currentHour)) {
+            $(this).addClass("past");
+        } if (getId > parseInt(currentHour)) {
+            $(this).addClass("future");
+        } if (getId === parseInt(currentHour)) {
+            $(this).addClass("present");
+
+        }
+
+    })
     
    

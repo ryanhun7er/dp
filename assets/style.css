@@ -10,18 +10,18 @@ body {
 }
 
 h1 {
-  font-family: 'Righteous', cursive;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  font-family: 'Crete Round', serif;
+  -webkit-text-fill-color: white; 
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
 
 .lead {
-  font-family: 'Righteous', cursive;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  font-family: 'Crete Round', serif;
+  -webkit-text-fill-color: white; 
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  font-size: 22px;
+  font-size: 26px;
 }
 
 textarea{
@@ -50,7 +50,8 @@ textarea{
 .time-block{
   text-align: center;
   border-radius: 15px;
-  font-family: 'Righteous', cursive;
+  font-family: 'Crete Round', serif;
+  font-size: 16px;
 }
 
 .row {
